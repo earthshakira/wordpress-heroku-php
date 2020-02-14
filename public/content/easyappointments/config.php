@@ -37,7 +37,7 @@ class Config {
     // ------------------------------------------------------------------------
     // DATABASE SETTINGS
     // ------------------------------------------------------------------------
-    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    const url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
     const DB_HOST       = trim($url["host"]);
     const DB_NAME       = trim($url["path"], "/");

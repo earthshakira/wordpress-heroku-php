@@ -25,9 +25,9 @@ class Migration_Legal_contents extends CI_Migration {
         $this->db->query('
             CREATE TABLE IF NOT EXISTS `ea_consents` (
                 `id` INT(11) NOT NULL AUTO_INCREMENT,
-                `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-                `modified` DATETIME DEFAULT CURRENT_TIMESTAMP
-                ON UPDATE CURRENT_TIMESTAMP,
+                `created` DATETIME DEFAULT NULL,
+                `modified` DATETIME DEFAULT NULL
+                ON UPDATE NULL,
                 `first_name` VARCHAR(256),
                 `last_name` VARCHAR(256),
                 `email` VARCHAR(512),

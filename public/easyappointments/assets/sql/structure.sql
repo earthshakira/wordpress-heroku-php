@@ -23,9 +23,8 @@ CREATE TABLE IF NOT EXISTS `ea_appointments` (
 
 CREATE TABLE IF NOT EXISTS `ea_consents` (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `created` DATETIME DEFAULT NULL,
-    `modified` DATETIME DEFAULT NULL
-    ON UPDATE NULL,
+    `created` DATETIME,
+    `modified` DATETIME,
     `first_name` VARCHAR(256),
     `last_name` VARCHAR(256),
     `email` VARCHAR(512),

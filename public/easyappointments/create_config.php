@@ -15,7 +15,7 @@ echo fwrite($file,"
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
 
-    const BASE_URL      = 'http://easy-appoints.herokuapp.com/content/easyappointments';
+    const BASE_URL      = 'http://easy-appoints.herokuapp.com/easyappointments';
     const LANGUAGE      = 'english';
     const DEBUG_MODE    = TRUE;
 

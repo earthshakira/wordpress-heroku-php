@@ -18,8 +18,8 @@
     }
   }],
   "require": {
-    "php": ">=5.3.2",
-    "wordpress": "4.8.1",
+    "php": ">=5.3.0",
+    "wordpress": "5.3.2",
     "fancyguy/webroot-installer": "1.0.0",
     "vlucas/phpdotenv": "^2.4"
   },

@@ -37,12 +37,10 @@ class Config {
     // ------------------------------------------------------------------------
     // DATABASE SETTINGS
     // ------------------------------------------------------------------------
-    const url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-    const DB_HOST       = trim($url["host"]);
-    const DB_NAME       = trim($url["path"], "/");
-    const DB_USERNAME   = trim($url["user"]);
-    const DB_PASSWORD   = trim($url["pass"]);
+    const DB_HOST       = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["host"]);
+    const DB_NAME       = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["path"], "/");
+    const DB_USERNAME   = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["user"]);
+    const DB_PASSWORD   = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["pass"]);
 
     // ------------------------------------------------------------------------
     // GOOGLE CALENDAR SYNC

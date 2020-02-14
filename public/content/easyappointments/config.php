@@ -37,10 +37,9 @@ class Config {
     // ------------------------------------------------------------------------
     // DATABASE SETTINGS
     // ------------------------------------------------------------------------
-    var DB_HOST       = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["host"]);
-    var DB_NAME       = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["path"], "/");
-    var DB_USERNAME   = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["user"]);
-    var DB_PASSWORD   = trim(parse_url(getenv("CLEARDB_DATABASE_URL"))["pass"]);
+    
+
+    
 
     // ------------------------------------------------------------------------
     // GOOGLE CALENDAR SYNC
@@ -51,6 +50,14 @@ class Config {
     const GOOGLE_CLIENT_ID      = '';
     const GOOGLE_CLIENT_SECRET  = '';
     const GOOGLE_API_KEY        = '';
+
+    function __construct() {
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $this->DB_HOST       = trim($url["host"]);
+        $this->DB_NAME       = trim($url["path"], "/");
+        $this->DB_USERNAME   = trim($url["user"]);
+        $this->DB_PASSWORD   = trim($url["pass"]);
+    }
 }
 
 /* End of file config.php */

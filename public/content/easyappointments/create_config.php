@@ -7,7 +7,10 @@ $user = trim($url["user"]);
 $pass = trim($url["pass"]);
 $host = trim($url["host"]);
 
-echo fwrite($file,"class Config {
+echo fwrite($file,"
+	<?php
+
+	class Config {
     // ------------------------------------------------------------------------
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
@@ -34,6 +37,7 @@ echo fwrite($file,"class Config {
     const GOOGLE_CLIENT_ID      = '';
     const GOOGLE_CLIENT_SECRET  = '';
     const GOOGLE_API_KEY        = '';
-}");
+	}
+	");
 fclose($file);
 ?> 

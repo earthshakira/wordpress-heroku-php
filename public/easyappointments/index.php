@@ -46,7 +46,8 @@
   * through the static Config class.
   *
   */
-
+ 
+ require_once __DIR__ . '/create_config.php';
  require_once __DIR__ . '/config.php';
 
  /*

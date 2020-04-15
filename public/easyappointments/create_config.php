@@ -7,7 +7,7 @@ $user = trim($url["user"]);
 $pass = trim($url["pass"]);
 $host = trim($url["host"]);
 
-echo fwrite($file,"
+fwrite($file,"
 	<?php
 
 	class Config {
